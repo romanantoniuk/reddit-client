@@ -8,22 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		CEF3226825823C9E003F08B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3226725823C9E003F08B9 /* AppDelegate.swift */; };
-		CEF3226A25823C9E003F08B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3226925823C9E003F08B9 /* SceneDelegate.swift */; };
 		CEF3226C25823C9E003F08B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3226B25823C9E003F08B9 /* ViewController.swift */; };
 		CEF3226F25823C9E003F08B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF3226D25823C9E003F08B9 /* Main.storyboard */; };
 		CEF3227125823CA0003F08B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF3227025823CA0003F08B9 /* Assets.xcassets */; };
 		CEF3227425823CA0003F08B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF3227225823CA0003F08B9 /* LaunchScreen.storyboard */; };
+		CEF3227F2582D6DB003F08B9 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3227E2582D6DB003F08B9 /* Storyboarded.swift */; };
+		CEF322812582D771003F08B9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF322802582D771003F08B9 /* Constants.swift */; };
+		CEF322832582D84A003F08B9 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF322822582D84A003F08B9 /* Coordinator.swift */; };
+		CEF322852582D8AB003F08B9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF322842582D8AB003F08B9 /* AppCoordinator.swift */; };
+		CEF3228C2582DD8B003F08B9 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3228B2582DD8B003F08B9 /* AppColor.swift */; };
+		CEF3228F2582DDFC003F08B9 /* StoryboardName.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3228E2582DDFC003F08B9 /* StoryboardName.swift */; };
+		CEF322912582DF97003F08B9 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF322902582DF97003F08B9 /* FlowCoordinator.swift */; };
+		CEF322942582E7C1003F08B9 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF322932582E7C1003F08B9 /* EndPoint.swift */; };
+		CEF3229625836D5B003F08B9 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3229525836D5B003F08B9 /* HTTPMethod.swift */; };
+		CEF3229825836D72003F08B9 /* HTTPNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3229725836D72003F08B9 /* HTTPNetworkResponse.swift */; };
+		CEF3229A25836D87003F08B9 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3229925836D87003F08B9 /* Result.swift */; };
+		CEF3229C25836DA1003F08B9 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3229B25836DA1003F08B9 /* NetworkLayer.swift */; };
+		CEF3229E25836DC7003F08B9 /* HTTPNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF3229D25836DC7003F08B9 /* HTTPNetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CEF3226425823C9E003F08B9 /* Reddit client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reddit client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF3226725823C9E003F08B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CEF3226925823C9E003F08B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CEF3226B25823C9E003F08B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CEF3226E25823C9E003F08B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEF3227025823CA0003F08B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEF3227325823CA0003F08B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEF3227525823CA0003F08B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEF3227E2582D6DB003F08B9 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		CEF322802582D771003F08B9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CEF322822582D84A003F08B9 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CEF322842582D8AB003F08B9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		CEF3228B2582DD8B003F08B9 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		CEF3228E2582DDFC003F08B9 /* StoryboardName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardName.swift; sourceTree = "<group>"; };
+		CEF322902582DF97003F08B9 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
+		CEF322932582E7C1003F08B9 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		CEF3229525836D5B003F08B9 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		CEF3229725836D72003F08B9 /* HTTPNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworkResponse.swift; sourceTree = "<group>"; };
+		CEF3229925836D87003F08B9 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		CEF3229B25836DA1003F08B9 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		CEF3229D25836DC7003F08B9 /* HTTPNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPNetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +81,66 @@
 			isa = PBXGroup;
 			children = (
 				CEF3226725823C9E003F08B9 /* AppDelegate.swift */,
-				CEF3226925823C9E003F08B9 /* SceneDelegate.swift */,
+				CEF3227B2582D695003F08B9 /* Coordinator */,
 				CEF3226B25823C9E003F08B9 /* ViewController.swift */,
+				CEF3227D2582D6BD003F08B9 /* Helpers */,
 				CEF3226D25823C9E003F08B9 /* Main.storyboard */,
 				CEF3227025823CA0003F08B9 /* Assets.xcassets */,
 				CEF3227225823CA0003F08B9 /* LaunchScreen.storyboard */,
 				CEF3227525823CA0003F08B9 /* Info.plist */,
 			);
 			path = "Reddit client";
+			sourceTree = "<group>";
+		};
+		CEF3227B2582D695003F08B9 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CEF322822582D84A003F08B9 /* Coordinator.swift */,
+				CEF322902582DF97003F08B9 /* FlowCoordinator.swift */,
+				CEF322842582D8AB003F08B9 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		CEF3227C2582D6B5003F08B9 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CEF322802582D771003F08B9 /* Constants.swift */,
+				CEF3228B2582DD8B003F08B9 /* AppColor.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		CEF3227D2582D6BD003F08B9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CEF322922582E7AA003F08B9 /* Networking */,
+				CEF3228D2582DDE6003F08B9 /* Storyboard */,
+				CEF3227C2582D6B5003F08B9 /* Constants */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CEF3228D2582DDE6003F08B9 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CEF3228E2582DDFC003F08B9 /* StoryboardName.swift */,
+				CEF3227E2582D6DB003F08B9 /* Storyboarded.swift */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		CEF322922582E7AA003F08B9 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CEF322932582E7C1003F08B9 /* EndPoint.swift */,
+				CEF3229525836D5B003F08B9 /* HTTPMethod.swift */,
+				CEF3229725836D72003F08B9 /* HTTPNetworkResponse.swift */,
+				CEF3229D25836DC7003F08B9 /* HTTPNetworkError.swift */,
+				CEF3229925836D87003F08B9 /* Result.swift */,
+				CEF3229B25836DA1003F08B9 /* NetworkLayer.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +214,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF3229C25836DA1003F08B9 /* NetworkLayer.swift in Sources */,
+				CEF3228C2582DD8B003F08B9 /* AppColor.swift in Sources */,
+				CEF3229A25836D87003F08B9 /* Result.swift in Sources */,
+				CEF3229825836D72003F08B9 /* HTTPNetworkResponse.swift in Sources */,
+				CEF3228F2582DDFC003F08B9 /* StoryboardName.swift in Sources */,
+				CEF322942582E7C1003F08B9 /* EndPoint.swift in Sources */,
+				CEF3229625836D5B003F08B9 /* HTTPMethod.swift in Sources */,
+				CEF322852582D8AB003F08B9 /* AppCoordinator.swift in Sources */,
 				CEF3226C25823C9E003F08B9 /* ViewController.swift in Sources */,
 				CEF3226825823C9E003F08B9 /* AppDelegate.swift in Sources */,
-				CEF3226A25823C9E003F08B9 /* SceneDelegate.swift in Sources */,
+				CEF3229E25836DC7003F08B9 /* HTTPNetworkError.swift in Sources */,
+				CEF322832582D84A003F08B9 /* Coordinator.swift in Sources */,
+				CEF3227F2582D6DB003F08B9 /* Storyboarded.swift in Sources */,
+				CEF322812582D771003F08B9 /* Constants.swift in Sources */,
+				CEF322912582DF97003F08B9 /* FlowCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
