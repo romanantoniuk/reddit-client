@@ -1,24 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QwE-Jn-doL">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Top posts-->
+        <scene sceneID="FkU-LL-lEb">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="TopPostViewController" title="Top posts" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ffP-n1-laJ" customClass="TopPostViewController" customModule="Reddit_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wal-zI-SK5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wfk-EB-oxB">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="tintColor"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexColor" name="tintColor"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="mainColor"/>
+                        <color key="tintColor" name="tintColor"/>
+                        <constraints>
+                            <constraint firstItem="0Ee-zZ-WFz" firstAttribute="trailing" secondItem="wfk-EB-oxB" secondAttribute="trailing" id="UFV-XP-p4u"/>
+                            <constraint firstItem="wfk-EB-oxB" firstAttribute="top" secondItem="0Ee-zZ-WFz" secondAttribute="top" id="X1N-v1-J9d"/>
+                            <constraint firstItem="wfk-EB-oxB" firstAttribute="leading" secondItem="0Ee-zZ-WFz" secondAttribute="leading" id="kgh-Xo-8eA"/>
+                            <constraint firstAttribute="bottom" secondItem="wfk-EB-oxB" secondAttribute="bottom" id="u9D-vz-ESl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Ee-zZ-WFz"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Top posts" id="lST-bL-deE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="oIT-tf-Qin">
+                            <color key="tintColor" name="tintColor"/>
+                            <connections>
+                                <action selector="tapRefresh:" destination="ffP-n1-laJ" id="CvQ-01-vjC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="wfk-EB-oxB" id="oKA-bZ-7e8"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="53i-qa-fMk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2730" y="-259"/>
+        </scene>
+        <!--Image Preview View Controller-->
+        <scene sceneID="hq1-nh-Szw">
+            <objects>
+                <viewController storyboardIdentifier="ImagePreviewViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3I4-cL-SBJ" customClass="ImagePreviewViewController" customModule="Reddit_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N61-no-96F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="DYK-hK-Rse">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ScR-AI-YzR">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ScR-AI-YzR" secondAttribute="trailing" id="1e8-Qo-upM"/>
+                                    <constraint firstItem="ScR-AI-YzR" firstAttribute="width" secondItem="DYK-hK-Rse" secondAttribute="width" id="BK0-mq-BLJ"/>
+                                    <constraint firstItem="ScR-AI-YzR" firstAttribute="leading" secondItem="DYK-hK-Rse" secondAttribute="leading" id="Exb-oL-LCg"/>
+                                    <constraint firstAttribute="bottom" secondItem="ScR-AI-YzR" secondAttribute="bottom" id="SmK-gZ-Rvb"/>
+                                    <constraint firstItem="ScR-AI-YzR" firstAttribute="height" secondItem="DYK-hK-Rse" secondAttribute="height" id="vCw-pw-96V"/>
+                                    <constraint firstItem="ScR-AI-YzR" firstAttribute="top" secondItem="DYK-hK-Rse" secondAttribute="top" id="wrX-X0-X93"/>
+                                </constraints>
+                            </scrollView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tsC-YF-aIt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" name="mainColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3f8-xu-K2e"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="cancel" id="RRY-pl-Ncz">
+                                        <connections>
+                                            <action selector="cancel:" destination="3I4-cL-SBJ" id="uPh-WD-VWl"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="e8e-Xy-ZWC"/>
+                                    <barButtonItem systemItem="save" id="gLA-Pg-y01">
+                                        <connections>
+                                            <action selector="save:" destination="3I4-cL-SBJ" id="q7g-WH-p36"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" name="tintColor"/>
+                                <color key="barTintColor" name="mainColor"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" name="mainColor"/>
+                        <constraints>
+                            <constraint firstItem="tsC-YF-aIt" firstAttribute="leading" secondItem="B8V-zD-seQ" secondAttribute="leading" id="26d-VE-k4p"/>
+                            <constraint firstItem="tsC-YF-aIt" firstAttribute="top" secondItem="B8V-zD-seQ" secondAttribute="top" id="GlT-zf-EwH"/>
+                            <constraint firstItem="tsC-YF-aIt" firstAttribute="trailing" secondItem="B8V-zD-seQ" secondAttribute="trailing" id="Ot5-XV-aCA"/>
+                            <constraint firstItem="DYK-hK-Rse" firstAttribute="leading" secondItem="B8V-zD-seQ" secondAttribute="leading" id="gcj-Wa-iuf"/>
+                            <constraint firstAttribute="bottom" secondItem="DYK-hK-Rse" secondAttribute="bottom" id="tI0-lB-DQw"/>
+                            <constraint firstItem="DYK-hK-Rse" firstAttribute="top" secondItem="tsC-YF-aIt" secondAttribute="bottom" id="ug7-H8-Pg8"/>
+                            <constraint firstItem="B8V-zD-seQ" firstAttribute="trailing" secondItem="DYK-hK-Rse" secondAttribute="trailing" id="wsq-2Q-rsn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="B8V-zD-seQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelBarButton" destination="RRY-pl-Ncz" id="NIM-QF-ES0"/>
+                        <outlet property="previewImageView" destination="ScR-AI-YzR" id="cvE-zY-ca5"/>
+                        <outlet property="saveBarButton" destination="gLA-Pg-y01" id="COm-ve-lIz"/>
+                        <outlet property="scrollView" destination="DYK-hK-Rse" id="PMw-85-VhL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7hn-SI-QVa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3646" y="-259"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Rhv-o6-rj4">
+            <objects>
+                <navigationController storyboardIdentifier="MainNavContoller" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QwE-Jn-doL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dIT-e2-v4X">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="mainColor"/>
+                        <color key="tintColor" name="tintColor"/>
+                        <color key="barTintColor" name="mainColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="textColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ffP-n1-laJ" kind="relationship" relationship="rootViewController" id="m10-Rc-Yxe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BbA-Aq-Ypa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820" y="-259"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="mainColor">
+            <color red="0.8666666666666667" green="0.86274509803921573" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="textColor">
+            <color red="0.097999997437000275" green="0.097999997437000275" blue="0.097999997437000275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tintColor">
+            <color red="0.90200001001358032" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+    <color key="tintColor" name="tintColor"/>
 </document>

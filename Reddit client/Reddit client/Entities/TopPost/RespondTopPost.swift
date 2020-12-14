@@ -1,5 +1,5 @@
 //
-//  Coordinator.swift
+//  RespondTopPost.swift
 //  Reddit client
 //
 //  Created by Roman Antoniuk on 12/11/20.
@@ -8,8 +8,9 @@
 
 import Foundation
 
-protocol Coordinator {
+struct RespondTopPost: Codable {
     
-    func start()
+    var kind: String
+    var data: DataRespondTopPost
     
 }

@@ -10,7 +10,7 @@ import Foundation
 
 enum Endpoint {
     
-    case getTopPost
+    case getTopPost(after: String?, count: Int?)
     
     private var path: String {
         switch self {
@@ -21,8 +21,15 @@ enum Endpoint {
     
     private var queryItems: [URLQueryItem] {
         switch self {
-        case .getTopPost:
-            return []
+        case .getTopPost(let value):
+            var items: [URLQueryItem] = [.init(name: "limit", value: "25")]
+            if let after = value.after {
+                items.append(.init(name: "after", value: after))
+            }
+            if let count = value.count, count > 0 {
+                items.append(.init(name: "count", value: "\(count)"))
+            }
+            return items
         }
     }
     

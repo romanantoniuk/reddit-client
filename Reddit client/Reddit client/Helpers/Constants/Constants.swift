@@ -11,5 +11,5 @@ import UIKit
 enum Constants {
     
     static let apiUrl = "www.reddit.com"
-
+    
 }

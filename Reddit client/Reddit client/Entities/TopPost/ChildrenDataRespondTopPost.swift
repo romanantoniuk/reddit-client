@@ -1,5 +1,5 @@
 //
-//  StoryboardName.swift
+//  ChildrenDataRespondTopPost.swift
 //  Reddit client
 //
 //  Created by Roman Antoniuk on 12/11/20.
@@ -8,8 +8,9 @@
 
 import Foundation
 
-enum StoryboardName: String {
-       
-    case main = "Main"
-       
+struct ChildrenDataRespondTopPost: Codable {
+    
+    var kind: String
+    var data: DataPost
+    
 }
