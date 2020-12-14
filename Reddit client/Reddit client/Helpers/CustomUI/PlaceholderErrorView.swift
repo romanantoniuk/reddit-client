@@ -18,7 +18,6 @@ final class PlaceholderErrorView: UIView {
         return imageView
     }()
     
-    
     lazy var messageLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 15)

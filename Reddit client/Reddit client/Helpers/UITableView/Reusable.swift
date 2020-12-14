@@ -12,7 +12,7 @@ protocol Reusable {
     
     static var reuseIdentifier: String { get }
     static var nib: UINib? { get }
-        
+
 }
 
 extension Reusable {

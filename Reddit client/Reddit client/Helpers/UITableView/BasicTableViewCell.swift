@@ -18,17 +18,7 @@ class BasicTableViewCell: UITableViewCell, Reusable {
         super.awakeFromNib()
         initUI()
     }
-    
-//    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-//        super.init(style: style, reuseIdentifier: reuseIdentifier)
-//        initUI()
-//    }
-//    
-//    required init?(coder: NSCoder) {
-//        super.init(coder: coder)
-//        initUI()
-//    }
-    
+        
     private func initUI() {
         selectionStyle = .none
         configureUI()
